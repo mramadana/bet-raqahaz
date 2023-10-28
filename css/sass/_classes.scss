@@ -2,7 +2,11 @@
 
 
 // start to static header 
-
+.header {
+    &.mb-header {
+        margin-bottom: 40px;
+    }
+}
 .lang {
     button {
         background: transparent;
@@ -269,7 +273,7 @@
 
     padding: 15px 0;
     .img-footer {
-        @media (max-width: $screen-md) {
+        @media (max-width: 990px) {
           text-align: center;
         }
     }

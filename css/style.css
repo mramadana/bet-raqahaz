@@ -166,6 +166,10 @@ input:focus {
 /*********************************************************
   // screens
 **********************************************************/
+.header.mb-header {
+  margin-bottom: 40px;
+}
+
 .lang button {
   background: transparent;
   display: flex;
@@ -471,7 +475,7 @@ html[lang=ar] .nav-btn.active span:nth-child(2) {
 .footer-section {
   padding: 15px 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .footer-section .img-footer {
     text-align: center;
   }
@@ -549,13 +553,13 @@ body {
   justify-content: center;
   flex-direction: column;
   z-index: 99;
-  background: transparent linear-gradient(270deg, #199EBD 0%, #423D43 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(to right, #000, #754c29);
 }
 .loader .load {
   width: 250px;
   height: 10px;
   border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to right, #000, #754c29);
   margin-top: 20px;
   overflow: hidden;
   position: relative;
@@ -567,12 +571,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #199ebd;
+  background-color: #120c06;
   animation: loader 1.2s infinite linear forwards;
 }
 .loader img {
-  height: 90px;
-  width: 220px;
+  max-width: 220px;
 }
 
 .home-banner {
@@ -639,10 +642,16 @@ body {
     font-size: 20px;
   }
 }
+.title.lg {
+  font-size: 22px;
+}
 
 .disc {
   font-size: 14px;
   color: #fff;
+}
+.disc.sm {
+  font-size: 12px;
 }
 @media (max-width: 550px) {
   .disc {
@@ -656,6 +665,10 @@ body {
   .disc.line-height {
     line-height: 30px;
   }
+}
+
+.md-linhe-height {
+  line-height: 25px;
 }
 
 .inner-text .disc {
@@ -873,6 +886,29 @@ body {
   top: -28px;
   position: absolute;
 }
+.services-section.without-shape {
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+@media (max-width: 550px) {
+  .services-section.without-shape {
+    margin-bottom: 30px;
+  }
+}
+.services-section.without-shape .multi-service::before, .services-section.without-shape .service::before {
+  display: none;
+}
+
+.custum-height {
+  height: calc(100vh - 386px);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  .custum-height {
+    height: auto;
+  }
+}
 
 .services-info {
   margin-bottom: 50px;
@@ -914,7 +950,8 @@ body {
   margin-bottom: 15px;
   border-radius: 12px;
 }
-.services-info.apartment .item .foot-item {
+
+.foot-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -923,16 +960,16 @@ body {
   gap: 10px;
   flex-wrap: wrap;
 }
-.services-info.apartment .item .foot-item .right {
+.foot-item .right {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.services-info.apartment .item .foot-item p {
+.foot-item p {
   font-size: 13px;
   color: #fff;
 }
-.services-info.apartment .item .foot-item .hint-date {
+.foot-item .hint-date {
   font-size: 11px;
 }
 
@@ -1166,6 +1203,213 @@ html[lang=ar] .main-input .dn-input {
   .main-input.text-area {
     min-height: 100px;
   }
+}
+
+.foot-icon {
+  margin-bottom: 20px;
+}
+@media (max-width: 990px) {
+  .foot-icon {
+    justify-content: center;
+  }
+}
+.foot-icon .icon {
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+}
+
+.our-service-imgs {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.our-service-imgs .img {
+  width: calc(50% - 10px);
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 550px) {
+  .our-service-imgs .img {
+    height: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .our-service-imgs .img {
+    height: 130px;
+  }
+}
+
+.file-show {
+  padding: 10px;
+  text-align: center;
+  background-color: #C5A981;
+  color: #fff;
+  margin-top: 10px;
+  transition: 0.3s;
+  width: 150px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.file-show:empty {
+  padding: 0;
+  background-color: transparent;
+}
+
+.our-project .nav {
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.our-project .nav-pills .nav-link {
+  width: 185px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
+@media (max-width: 550px) {
+  .our-project .nav-pills .nav-link {
+    width: 130px;
+  }
+}
+.our-project .nav-pills .nav-link.active {
+  background-color: #C5A981;
+  color: #fff;
+}
+
+.about-img {
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .about-img {
+    height: 250px;
+  }
+}
+@media (max-width: 550px) {
+  .about-img {
+    height: 150px;
+  }
+}
+
+.cunstom-mr-top {
+  margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .cunstom-mr-top {
+    margin-top: 50px;
+  }
+}
+
+.box-tab {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+@media (max-width: 550px) {
+  .box-tab {
+    justify-content: center;
+  }
+}
+.box-tab .box {
+  width: 200px;
+  height: 160px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 550px) {
+  .box-tab .box {
+    width: 135px;
+    height: 135px;
+  }
+}
+.box-tab .box::before {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.5019607843);
+  position: absolute;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+  opacity: 0.7;
+}
+html[lang=en] .box-tab .box::before {
+  right: 0;
+}
+html[lang=ar] .box-tab .box::before {
+  left: 0;
+}
+.box-tab .box .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.box-tab .box .hint {
+  z-index: 2;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.apartment-modal .modal-content {
+  background-color: transparent;
+  border: 0;
+}
+.apartment-modal .modal-body {
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0 0 5px gray;
+}
+.apartment-modal .close {
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  z-index: 5;
+  color: #fff;
+}
+html[lang=en] .apartment-modal .close {
+  right: 0;
+}
+html[lang=ar] .apartment-modal .close {
+  left: 0;
+}
+@media (max-width: 550px) {
+  .apartment-modal .main-content {
+    max-height: 450px;
+    overflow-y: auto;
+    margin-top: 28px;
+  }
+  html[lang=en] .apartment-modal .main-content {
+    padding-left: 10px;
+  }
+  html[lang=ar] .apartment-modal .main-content {
+    padding-right: 10px;
+  }
+}
+
+.hint-modal {
+  cursor: pointer;
+}
+
+.advantages .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.advantages .item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 @keyframes loader {

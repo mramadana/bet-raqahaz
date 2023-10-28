@@ -37,12 +37,12 @@ body {
   justify-content: center;
   flex-direction: column;
   z-index: 99;
-  background: transparent linear-gradient(270deg, #199EBD 0%, #423D43 100%) 0% 0% no-repeat padding-box;
+  background: linear-gradient(to right, #000, #754c29);
   .load {
       width: 250px;
       height: 10px;
       border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.2);
+      background: linear-gradient(to right, #000, #754c29);
       margin-top: 20px;
       overflow: hidden;
       position: relative;
@@ -53,13 +53,12 @@ body {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: #199ebd;
+          background-color: #120c06;
           animation: loader 1.2s infinite linear forwards;
       }
   }
   img {
-      height: 90px;
-      width: 220px;
+      max-width: 220px;
   }
 }
 
@@ -121,11 +120,17 @@ body {
           font-size: 20px;
         }
     }
+    &.lg {
+      font-size: 22px;
+    }
 }
 
 .disc {
     font-size: 14px;
     color: #fff;
+    &.sm {
+      font-size: 12px;
+    }
     @media (max-width: $screen-xs) {
       font-size: 13px;
     }
@@ -135,6 +140,10 @@ body {
           line-height: 30px;
         }
     }
+  }
+
+  .md-linhe-height {
+    line-height: 25px;
   }
 
   .inner-text {
@@ -332,6 +341,28 @@ body {
         }
       }
     }
+
+    &.without-shape {
+      margin-bottom: 50px;
+      margin-top: 0;
+      @media (max-width: $screen-xs) {
+        margin-bottom: 30px;
+      }
+      .multi-service, .service {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .custum-height {
+    height: calc(100vh - 386px);
+    display: flex;
+    align-items: center;
+    @media (max-width: 1023px) {
+      height: auto;
+    }
   }
   
   // start to section services-info
@@ -377,28 +408,30 @@ body {
           border-radius: 12px;
         }
 
-        .foot-item {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-top: 10px;
-          color: #fff;
-          gap: 10px;
-          flex-wrap: wrap;
-          .right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-          p {
-            font-size: 13px;
-            color: #fff;
-          }
-          .hint-date {
-            font-size: 11px;
-          }
-        }
+
       }
+    }
+  }
+
+  .foot-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #fff;
+    gap: 10px;
+    flex-wrap: wrap;
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p {
+      font-size: 13px;
+      color: #fff;
+    }
+    .hint-date {
+      font-size: 11px;
     }
   }
 
@@ -594,6 +627,200 @@ body {
       }
     }
   }
+
+
+  .foot-icon {
+    margin-bottom: 20px;
+    @media (max-width: 990px) {
+      justify-content: center;
+    }
+    .icon {
+      width: 25px;
+      height: 25px;
+      font-size: 12px;
+    }
+  }
+
+  .our-service-imgs {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .img {
+      width: calc(50% - 10px);
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      @media (max-width: $screen-xs) {
+        height: 150px;
+      }
+      @media (max-width: $screen-xxs) {
+        height: 130px;
+      }
+    }
+  }
+
+  .file-show {
+    padding: 10px;
+    text-align: center;
+    background-color: #C5A981;
+    color: #fff;
+    margin-top: 10px;
+    transition: 0.3s;
+    width: 150px;
+    font-size: 13px;
+    border-radius: 3px;
+    &:empty {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  .our-project {
+    .nav {
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-pills {
+      .nav-link {
+        width: 185px;
+        text-align: center;
+        font-size: 14px;
+        background-color: #fff;
+        color: #000;
+        @media (max-width: $screen-xs) {
+          width: 130px;
+        }
+        &.active {
+          background-color: #C5A981;
+          color: #fff;
+        }
+      }
+    } 
+  }
+
+
+  .about-img {
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    @media (max-width: $screen-md) {
+      height: 250px;
+    }
+    @media (max-width: $screen-xs) {
+      height: 150px;
+    }
+  }
+
+  .cunstom-mr-top {
+    margin-top: 80px;
+    @media (max-width: $screen-md) {
+      margin-top: 50px;
+    }
+  }
+
+
+  .box-tab {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    @media (max-width: $screen-xs) {
+      justify-content: center;
+    }
+    .box {
+      width: 200px;
+      height: 160px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      @media (max-width: $screen-xs) {
+        width: 135px;
+        height: 135px;
+      }
+      &::before {
+        content: "";
+        @include dir-right(0);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #12121280;
+        position: absolute;
+        pointer-events: none;
+        transition: .4s ease-in-out;
+        opacity: .7;
+      }
+      .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+      }
+      .hint {
+        z-index: 2;
+        color: #fff;
+        font-size: 19px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .apartment-modal {
+    .modal-content {
+      background-color: transparent;
+      border: 0;
+    }
+    .modal-body {
+      background-color: #000;
+      border-radius: 15px;
+      box-shadow: 0 0 5px gray;
+    }
+    .close {
+      width: 50px;
+      height: 5px;
+      position: absolute;
+      top: 5px;
+      @include dir-right(0);
+      z-index: 5;
+      color: #fff;
+    }
+
+    .main-content {
+      @media (max-width: $screen-xs) {
+        max-height: 450px;
+        overflow-y: auto;
+        margin-top: 28px;
+        @include dir-padding-left(10px);
+      }
+    }
+  }
+
+  .hint-modal {
+    cursor: pointer;
+  }
+
+  .advantages {
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  
+
+
+
+
+
 
 @keyframes loader {
   from {
